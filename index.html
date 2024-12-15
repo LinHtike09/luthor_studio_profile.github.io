@@ -7,115 +7,160 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #ccc;
-            background: #121212;
-        }
-        header {
-            background: #1f1f1f;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        nav a {
-            color: #bbb;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-        nav a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .hero {
-            background-image: url('bg.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            position: relative;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        .services, .portfolio {
-            padding: 40px;
-            text-align: center;
-        }
-        .services h2, .portfolio h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        .services .service-list, .portfolio .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .service-item, .gallery-item {
-            flex: 1 1 calc(25% - 20px);
-            box-sizing: border-box;
-            padding: 10px;
-            border: 1px solid #444;
-            border-radius: 5px;
-            background: #1e1e1e;
-            color: #ccc;
-        }
-        .gallery-item img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .intro {
-            padding: 40px;
-            text-align: center;
-            background: #1c1c1c;
-        }
-        .intro img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-        .intro h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        .intro p {
-            font-size: 1.2rem;
-            color: #bbb;
-        }
-        .intro a {
-            color: #4caf50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .intro a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #1f1f1f;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
+   margin: 0;
+   font-family: Arial, sans-serif;
+   color: #333; /* Dark text for contrast */
+   background: #D6BD98; /* Soft peach background */
+}
+
+header {
+   background: #1A3636; /* Light peach-pink for header */
+   color: #fff; /* Dark text for readability */
+   padding: 20px;
+   text-align: center;
+}
+
+header h1 {
+   margin: 0;
+   font-size: 2.5rem;
+}
+
+nav {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 10px;
+}
+
+nav a {
+   color: #D6BD98; /* Dark text for navigation links */
+   text-decoration: none;
+   font-size: 1.1rem;
+}
+
+nav a:hover {
+   color: #FF6347; /* Change link color on hover (tomato red) */
+   text-decoration: underline;
+}
+
+.hero {
+   background-image: url('bg.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 60vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+   position: relative;
+}
+
+.hero h2 {
+   font-size: 3rem;
+   margin: 0;
+   text-align: center;
+}
+
+@media (max-width: 768px) {
+   .hero h2 {
+       font-size: 2rem;
+       padding: 0 10px;
+   }
+}
+
+
+.services, .portfolio {
+   padding: 40px;
+   text-align: center;
+   background: #FFF8F0; /* Soft background for sections */
+}
+
+.services h2, .portfolio h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+   color: #333; /* Dark text for headings */
+}
+
+.services .service-list, .portfolio .gallery {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.service-item, .gallery-item {
+   flex: 1 1 calc(25% - 20px);
+   box-sizing: border-box;
+   padding: 10px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-list-1 {
+ justify-content: left;
+}
+.service-list-div {
+display: flex;
+}
+
+.gallery-item:hover {
+   transform: scale(1.1); /* Slight zoom-in effect */
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Add a shadow effect on hover */
+}
+
+/* Ensuring images inside gallery items also have smooth transitions */
+.gallery-item img {
+   max-width: 100%;
+   border-radius: 25px;
+   transition: transform 0.3s ease;
+
+}
+
+.gallery-item:hover img {
+   transform: scale(1.05); /* Slight zoom-in effect on the image itself */
+}
+
+.intro {
+   padding: 40px;
+   text-align: center;
+   background: #FFEBE0; /* Light warm background for intro */
+}
+
+.intro img {
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+   margin-bottom: 20px;
+}
+
+.intro h2 {
+   font-size: 2rem;
+   margin-bottom: 10px;
+   color: #333; /* Dark text for name */
+}
+
+.intro p {
+   font-size: 1.2rem;
+   color: #555; /* Medium dark text for paragraph */
+}
+
+.intro a {
+   color: #FF6347; /* Tomato red for links */
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.intro a:hover {
+   text-decoration: underline;
+}
+
+footer {
+   background: #677D6A; /* Same light peach-pink as header */
+   color: #fff; /* Dark text for footer */
+   text-align: center;
+   padding: 10px;
+   position: relative;
+}
     </style>
 </head>
 <body>
@@ -132,49 +177,127 @@
 </section>
 
 <section class="intro">
-    <img src="profile.jpg" alt="Profile Image">
-    <h2>Your Name</h2>
-    <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+    <img src="me.jpg" alt="Profile Image">
+    <h2>Lin Htike Aung</h2>
+    <p>Email: <a href="mailto:lin664603@gmail.com">lin664603@gmail.com</a></p>
 </section>
 
 <section id="services" class="services">
-    <h2>Our Services</h2>
+    <h2>Services</h2>
+
     <div class="service-list">
-        <div class="service-item">
-            <h3>Event Photography</h3>
-            <p>Preserve your special moments with stunning event photos.</p>
+        <div>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Event Photography</h3>
+                    <p>Preserve your special moments with stunning event photos.</p>
+                </div>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Portrait Photography</h3>
+                    <p>Capture your personality with professional portraits.</p>
+                </div>
+
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Product Photography</h3>
+                    <p>Showcase your products with high-quality images.</p>
+                </div>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Wedding Photography</h3>
+                    <p>Relive your big day with beautiful wedding photos.</p>
+                </div>
+            </div>
+
         </div>
-        <div class="service-item">
-            <h3>Portrait Photography</h3>
-            <p>Capture your personality with professional portraits.</p>
-        </div>
-        <div class="service-item">
-            <h3>Product Photography</h3>
-            <p>Showcase your products with high-quality images.</p>
-        </div>
-        <div class="service-item">
-            <h3>Wedding Photography</h3>
-            <p>Relive your big day with beautiful wedding photos.</p>
-        </div>
+
     </div>
+
 </section>
 
 <section id="portfolio" class="portfolio">
-    <h2>Portfolio</h2>
+    <h2>Gallery</h2>
+
+    <h1>Portrait Photography</h1>
     <div class="gallery">
+
         <div class="gallery-item">
-            <img src="portfolio1.jpg" alt="Portfolio Image 1">
+            <img src="portrait1.jpg" alt="Portfolio Image 2">
         </div>
         <div class="gallery-item">
-            <img src="portfolio2.jpg" alt="Portfolio Image 2">
+            <img src="portrait.jpg" alt="Portfolio Image 2">
         </div>
+
         <div class="gallery-item">
-            <img src="portfolio3.jpg" alt="Portfolio Image 3">
-        </div>
-        <div class="gallery-item">
-            <img src="portfolio4.jpg" alt="Portfolio Image 4">
+            <img src="portrait3.jpg" alt="Portfolio Image 2">
         </div>
     </div>
+
+
+    <h1 style="margin-top:100px">Toy Photography</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img2.jpg" alt="Portfolio Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img1.jpg" alt="Portfolio Image 1">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img3.jpg" alt="Portfolio Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img4.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img5.jpg" alt="Portfolio Image 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img6.jpg" alt="Portfolio Image 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img7.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img8.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img9.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img10.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img11.jpg" alt="Portfolio Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img12.jpg" alt="Portfolio Image 4">
+        </div>
+    </div>
+
+    <h1 style="margin-top:100px">Product Photography</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img15.jpg" alt="Portfolio Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img16.jpg" alt="Portfolio Image 2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img17.jpg" alt="Portfolio Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img18.jpg" alt="Portfolio Image 2">
+        </div>
+    </div>
+
 </section>
 
 <footer>
