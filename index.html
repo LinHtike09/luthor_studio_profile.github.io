@@ -81,12 +81,29 @@
             color: #333; /* Dark text for headings */
         }
 
-        .services .service-list, .portfolio .gallery {
-            display: grid;
+        .services .service-list{
             grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
             gap: 20px;
             justify-items: center;
         }
+
+        .portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 20px;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .portfolio .gallery {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+
+    .gallery-item {
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+}
 
         .service-item, .gallery-item {
             padding: 10px;
@@ -108,16 +125,6 @@
             transform: scale(1.05); /* Slight zoom-in effect on the image itself */
         }
 
-        /* Mobile view: Stack gallery items vertically */
-        @media (max-width: 768px) {
-            .gallery {
-                display: block; /* Stack gallery items vertically */
-            }
-
-            .gallery-item {
-                margin-bottom: 20px; /* Add spacing between stacked items */
-            }
-        }
 
         .intro {
             padding: 40px;
