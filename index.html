@@ -7,160 +7,159 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-   margin: 0;
-   font-family: Arial, sans-serif;
-   color: #333; /* Dark text for contrast */
-   background: #D6BD98; /* Soft peach background */
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333; /* Dark text for contrast */
+            background: #D6BD98; /* Soft peach background */
+        }
 
-header {
-   background: #1A3636; /* Light peach-pink for header */
-   color: #fff; /* Dark text for readability */
-   padding: 20px;
-   text-align: center;
-}
+        header {
+            background: #1A3636; /* Light peach-pink for header */
+            color: #fff; /* Dark text for readability */
+            padding: 20px;
+            text-align: center;
+        }
 
-header h1 {
-   margin: 0;
-   font-size: 2.5rem;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-nav {
-   display: flex;
-   justify-content: center;
-   gap: 15px;
-   margin-top: 10px;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
 
-nav a {
-   color: #D6BD98; /* Dark text for navigation links */
-   text-decoration: none;
-   font-size: 1.1rem;
-}
+        nav a {
+            color: #D6BD98; /* Dark text for navigation links */
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-nav a:hover {
-   color: #FF6347; /* Change link color on hover (tomato red) */
-   text-decoration: underline;
-}
+        nav a:hover {
+            color: #FF6347; /* Change link color on hover (tomato red) */
+            text-decoration: underline;
+        }
 
-.hero {
-   background-image: url('bg.jpg');
-   background-size: cover;
-   background-position: center;
-   height: 60vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: #fff;
-   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-   position: relative;
-}
+        .hero {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
 
-.hero h2 {
-   font-size: 3rem;
-   margin: 0;
-   text-align: center;
-}
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            text-align: center;
+        }
 
-@media (max-width: 768px) {
-   .hero h2 {
-       font-size: 2rem;
-       padding: 0 10px;
-   }
-}
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+                padding: 0 10px;
+            }
+        }
 
+        .services, .portfolio {
+            padding: 40px;
+            text-align: center;
+            background: #FFF8F0; /* Soft background for sections */
+        }
 
-.services, .portfolio {
-   padding: 40px;
-   text-align: center;
-   background: #FFF8F0; /* Soft background for sections */
-}
+        .services h2, .portfolio h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333; /* Dark text for headings */
+        }
 
-.services h2, .portfolio h2 {
-   font-size: 2rem;
-   margin-bottom: 20px;
-   color: #333; /* Dark text for headings */
-}
+        .services .service-list, .portfolio .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+            gap: 20px;
+            justify-items: center;
+        }
 
-.services .service-list, .portfolio .gallery {
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   gap: 20px;
-}
+        .service-item, .gallery-item {
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.service-item, .gallery-item {
-   flex: 1 1 calc(25% - 20px);
-   box-sizing: border-box;
-   padding: 10px;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .gallery-item:hover {
+            transform: scale(1.1); /* Slight zoom-in effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Add a shadow effect on hover */
+        }
 
-.service-list-1 {
- justify-content: left;
-}
-.service-list-div {
-display: flex;
-}
+        .gallery-item img {
+            max-width: 100%;
+            border-radius: 25px;
+            transition: transform 0.3s ease;
+        }
 
-.gallery-item:hover {
-   transform: scale(1.1); /* Slight zoom-in effect */
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Add a shadow effect on hover */
-}
+        .gallery-item:hover img {
+            transform: scale(1.05); /* Slight zoom-in effect on the image itself */
+        }
 
-/* Ensuring images inside gallery items also have smooth transitions */
-.gallery-item img {
-   max-width: 100%;
-   border-radius: 25px;
-   transition: transform 0.3s ease;
+        /* Mobile view: Stack gallery items vertically */
+        @media (max-width: 768px) {
+            .gallery {
+                display: block; /* Stack gallery items vertically */
+            }
 
-}
+            .gallery-item {
+                margin-bottom: 20px; /* Add spacing between stacked items */
+            }
+        }
 
-.gallery-item:hover img {
-   transform: scale(1.05); /* Slight zoom-in effect on the image itself */
-}
+        .intro {
+            padding: 40px;
+            text-align: center;
+            background: #FFEBE0; /* Light warm background for intro */
+        }
 
-.intro {
-   padding: 40px;
-   text-align: center;
-   background: #FFEBE0; /* Light warm background for intro */
-}
+        .intro img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
 
-.intro img {
-   border-radius: 50%;
-   width: 150px;
-   height: 150px;
-   margin-bottom: 20px;
-}
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333; /* Dark text for name */
+        }
 
-.intro h2 {
-   font-size: 2rem;
-   margin-bottom: 10px;
-   color: #333; /* Dark text for name */
-}
+        .intro p {
+            font-size: 1.2rem;
+            color: #555; /* Medium dark text for paragraph */
+        }
 
-.intro p {
-   font-size: 1.2rem;
-   color: #555; /* Medium dark text for paragraph */
-}
+        .intro a {
+            color: #FF6347; /* Tomato red for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.intro a {
-   color: #FF6347; /* Tomato red for links */
-   text-decoration: none;
-   font-weight: bold;
-}
+        .intro a:hover {
+            text-decoration: underline;
+        }
 
-.intro a:hover {
-   text-decoration: underline;
-}
-
-footer {
-   background: #677D6A; /* Same light peach-pink as header */
-   color: #fff; /* Dark text for footer */
-   text-align: center;
-   padding: 10px;
-   position: relative;
-}
+        footer {
+            background: #677D6A; /* Same light peach-pink as header */
+            color: #fff; /* Dark text for footer */
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -184,39 +183,24 @@ footer {
 
 <section id="services" class="services">
     <h2>Services</h2>
-
     <div class="service-list">
-        <div>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Event Photography</h3>
-                    <p>Preserve your special moments with stunning event photos.</p>
-                </div>
-            </div>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Portrait Photography</h3>
-                    <p>Capture your personality with professional portraits.</p>
-                </div>
-
-            </div>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Product Photography</h3>
-                    <p>Showcase your products with high-quality images.</p>
-                </div>
-            </div>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Wedding Photography</h3>
-                    <p>Relive your big day with beautiful wedding photos.</p>
-                </div>
-            </div>
-
+        <div class="service-item">
+            <h3>Event Photography</h3>
+            <p>Preserve your special moments with stunning event photos.</p>
         </div>
-
+        <div class="service-item">
+            <h3>Portrait Photography</h3>
+            <p>Capture your personality with professional portraits.</p>
+        </div>
+        <div class="service-item">
+            <h3>Product Photography</h3>
+            <p>Showcase your products with high-quality images.</p>
+        </div>
+        <div class="service-item">
+            <h3>Wedding Photography</h3>
+            <p>Relive your big day with beautiful wedding photos.</p>
+        </div>
     </div>
-
 </section>
 
 <section id="portfolio" class="portfolio">
@@ -224,19 +208,16 @@ footer {
 
     <h1>Portrait Photography</h1>
     <div class="gallery">
-
         <div class="gallery-item">
             <img src="portrait1.jpg" alt="Portfolio Image 2">
         </div>
         <div class="gallery-item">
             <img src="portrait.jpg" alt="Portfolio Image 2">
         </div>
-
         <div class="gallery-item">
             <img src="portrait3.jpg" alt="Portfolio Image 2">
         </div>
     </div>
-
 
     <h1 style="margin-top:100px">Toy Photography</h1>
     <div class="gallery">
@@ -246,7 +227,6 @@ footer {
         <div class="gallery-item">
             <img src="img1.jpg" alt="Portfolio Image 1">
         </div>
-
         <div class="gallery-item">
             <img src="img3.jpg" alt="Portfolio Image 3">
         </div>
@@ -256,11 +236,9 @@ footer {
         <div class="gallery-item">
             <img src="img5.jpg" alt="Portfolio Image 4">
         </div>
-
         <div class="gallery-item">
             <img src="img6.jpg" alt="Portfolio Image 4">
         </div>
-
         <div class="gallery-item">
             <img src="img7.jpg" alt="Portfolio Image 4">
         </div>
@@ -289,7 +267,6 @@ footer {
         <div class="gallery-item">
             <img src="img16.jpg" alt="Portfolio Image 2">
         </div>
-
         <div class="gallery-item">
             <img src="img17.jpg" alt="Portfolio Image 2">
         </div>
@@ -297,7 +274,6 @@ footer {
             <img src="img18.jpg" alt="Portfolio Image 2">
         </div>
     </div>
-
 </section>
 
 <footer>
