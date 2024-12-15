@@ -47,10 +47,23 @@
             justify-content: center;
             color: #fff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
         }
         .hero h2 {
             font-size: 3rem;
             margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 70%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: rgba(255, 255, 255, 0.75); }
         }
         .services, .portfolio {
             padding: 40px;
@@ -100,6 +113,14 @@
             font-size: 1.2rem;
             color: #bbb;
         }
+        .intro a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .intro a:hover {
+            text-decoration: underline;
+        }
         footer {
             background: #1f1f1f;
             color: #fff;
@@ -111,7 +132,7 @@
 </head>
 <body>
 <header>
-    <h1>Luthor Studio</h1>
+    <h1>PhotoLancer</h1>
     <nav>
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
@@ -123,9 +144,9 @@
 </section>
 
 <section class="intro">
-    <img src="profile.jpg" alt="Profile Image">
-    <h2>Lin Htike Aung</h2>
-    <p>Email: yourname@example.com</p>
+    <img src="me.jpg" alt="Profile Image">
+    <h2>Your Name</h2>
+    <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
 </section>
 
 <section id="services" class="services">
