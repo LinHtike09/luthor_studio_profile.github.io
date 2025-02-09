@@ -12,7 +12,7 @@
             color: #333; /* Dark text for contrast */
             background: #D6BD98; /* Soft peach background */
         }
-           
+
 
     
         
@@ -45,6 +45,34 @@
             color: #FF6347; /* Change link color on hover (tomato red) */
             text-decoration: underline;
         }
+
+        
+
+        .typing-animation {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #FF6347; /* Cursor effect */
+    animation: typing 5s steps(50) 1s forwards, blink 0.75s step-end infinite; /* Typing and blinking cursor */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
         .hero {
             background-image: url('bg.jpg');
@@ -197,6 +225,7 @@
     </nav>
 </header>
 
+
 <section class="hero">
     <h2>Capture Your Moments with Professionalism</h2>
 </section>
@@ -204,7 +233,7 @@
 <section class="intro">
     <img src="me.jpg" alt="Profile Image"/>
     <h2>Lin Htike Aung</h2>
-    <h3>"I love photography & telling a story through photography. <br>Capturing those special moments are emotions in a nature style is what I do best."</h3>
+    <h3 class="typing-animation">"I love photography & telling a story through photography. <br>Capturing those special moments are emotions in a nature style is what I do best."</h3>
     <p style="font-size:16px">Email: <a href="mailto:lin664603@gmail.com">lin664603@gmail.com</a></p>
     <p style="font-size:16px">Phone: 09978820086</p>
 </section>
