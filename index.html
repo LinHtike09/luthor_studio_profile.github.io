@@ -26,16 +26,16 @@
     
         
         header {
-            background: #1A3636; /* Light peach-pink for header */
+            
             color: #fff; /* Dark text for readability */
             padding: 20px;
-            text-align: center;
+ 
             
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.4rem;
              font-family: 'Playfair Display', serif;
         }
 
@@ -89,27 +89,43 @@
             background-image: url('bg.jpg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
+            height: 80vh;
+           
+           
             justify-content: center;
             color: #fff;
             
             position: relative;
         }
+       .heroSection {
+           display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 60vh;
+    text-align: center;
 
-        .hero h2 {
+}
+
+
+        h4 {
+
+             align-items: center;
              font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin: 0;
-            text-align: center;
+            font-size: 2rem;
+            margin: 140;
+            
         }
 
         @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2rem;
+
+
+            h4 {
+                font-size: 1.2rem;
                 padding: 0 10px;
             }
+.hero {
+ height: 60vh;
+}
         }
 
         .services, .portfolio {
@@ -175,7 +191,7 @@
     width: 100%;
     height: 200px; /* Initially set to fill the container */
     object-fit: cover; /* Fill the container without distorting */
-    border-radius: 15px;
+    border-radius: px;
     transition: height 0.3s ease; /* Smooth transition for height change */
 }
 
@@ -236,17 +252,17 @@
     </style>
 </head>
 <body>
-<header>
-    <h1>Luthor Studio</h1>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-    </nav>
-</header>
+
 
 
 <section class="hero">
-    <h2 class="animate__animated animate__backInDown">Capture Your Moments with Professionalism</h2>
+<header>
+    <h1>L U T H O R - S T U D I O</h1>
+  
+</header>
+<section class="heroSection">
+    <h4 class="animate__animated animate__backInDown">Capture Your Moments with Professionalism</h4>
+</section>
 </section>
 
 <section class="intro">
